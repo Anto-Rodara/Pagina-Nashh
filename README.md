@@ -4,6 +4,21 @@ Sitio web: **Un rinconcito para ti**
 
 Regalo web estático hecho con HTML, CSS y JavaScript. No necesita instalar dependencias ni compilarse.
 
+## Publicarlo con Netlify
+
+La configuración de `netlify.toml` publica la carpeta raíz del proyecto directamente, sin comando de compilación.
+
+### Conectar este repositorio de GitHub
+
+1. En Netlify, selecciona **Add new site → Import an existing project** y conecta GitHub.
+2. Elige el repositorio `Anto-Rodara/Pagina-Nashh` y la rama `main`.
+3. Deja vacío el comando de compilación y usa `.` como directorio de publicación. Netlify también puede leer estos valores de `netlify.toml`.
+4. Selecciona **Deploy** y abre la URL que Netlify asigne al sitio.
+
+### Publicar manualmente
+
+Arrastra la carpeta del proyecto a Netlify Drop. Incluye `index.html`, `style.css`, `app.js` y las carpetas `Imagenes` y `Musica`.
+
 ## Publicarlo con GitHub Pages
 
 1. Sube los archivos y carpetas de este proyecto a la rama principal (`main`), conservando sus nombres y mayúsculas.
