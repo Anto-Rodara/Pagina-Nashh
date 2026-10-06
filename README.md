@@ -4,6 +4,14 @@ Sitio web: **Un rinconcito para ti**
 
 Regalo web estático hecho con HTML, CSS y JavaScript. No necesita instalar dependencias ni compilarse.
 
+## Sincronización automática con GitHub y Netlify
+
+En VS Code, abre como carpeta raíz el clon local `Pagina-Nashh` y permite las tareas del espacio de trabajo si VS Code lo solicita. La tarea **Sincronización automática con GitHub** se inicia al abrir la carpeta. También puedes iniciarla desde **Terminal → Run Task**.
+
+Después de cuatro segundos sin ediciones, el proceso crea un commit y hace `push` a `main`. Agrupa las ediciones cercanas y vuelve a intentar sincronizar cada minuto si hubo un error temporal. La tarea debe seguir activa y VS Code debe permanecer abierto. Pulsa el botón de detener en la terminal de la tarea para pausarla.
+
+Conecta este repositorio a Netlify con `main` como rama de producción para que cada `push` dispare una publicación. Revisa la terminal de la tarea: mostrará si el envío a GitHub tuvo éxito o si se necesita resolver un error.
+
 ## Publicarlo con Netlify
 
 La configuración de `netlify.toml` publica la carpeta raíz del proyecto directamente, sin comando de compilación.
