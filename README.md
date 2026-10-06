@@ -1,22 +1,20 @@
-# Pagina-Nashh
-
-Sitio web: **Un rinconcito para ti**
+# Un rinconcito para ti
 
 Regalo web estático hecho con HTML, CSS y JavaScript. No necesita instalar dependencias ni compilarse.
 
 ## Sincronización automática con GitHub y Netlify
 
-En VS Code, abre como carpeta raíz el clon local `Pagina-Nashh` y permite las tareas del espacio de trabajo si VS Code lo solicita. La tarea **Sincronización automática con GitHub** se inicia al abrir la carpeta. También puedes iniciarla desde **Terminal → Run Task**.
+Abre esta carpeta (`Pagina regalo`) como carpeta raíz en VS Code y permite las tareas automáticas del espacio de trabajo si VS Code lo solicita. La tarea **Sincronización automática con GitHub** se ejecuta al abrir la carpeta y observa los archivos del sitio. También puedes iniciarla desde **Terminal → Run Task**.
 
-Después de cuatro segundos sin ediciones, el proceso crea un commit y hace `push` a `main`. Agrupa las ediciones cercanas y vuelve a intentar sincronizar cada minuto si hubo un error temporal. La tarea debe seguir activa y VS Code debe permanecer abierto. Pulsa el botón de detener en la terminal de la tarea para pausarla.
+Cuando dejas de editar durante cuatro segundos, la tarea crea un commit y lo envía a la rama `main` de GitHub. La sincronización necesita conexión y credenciales con permiso de escritura. VS Code debe permanecer abierto y la tarea activa.
 
-Conecta este repositorio a Netlify con `main` como rama de producción para que cada `push` dispare una publicación. Revisa la terminal de la tarea: mostrará si el envío a GitHub tuvo éxito o si se necesita resolver un error.
+En Netlify, conecta el repositorio `Anto-Rodara/Pagina-Nashh`, elige `main` como rama de producción y configura el directorio de publicación como `.` (raíz). Con esa conexión, cada `push` correcto a `main` inicia un nuevo deploy. Un push exitoso a GitHub por sí solo no confirma que Netlify ya esté conectado.
 
 ## Publicarlo con Netlify
 
 La configuración de `netlify.toml` publica la carpeta raíz del proyecto directamente, sin comando de compilación.
 
-### Conectar este repositorio de GitHub
+### Conectar el repositorio de GitHub
 
 1. En Netlify, selecciona **Add new site → Import an existing project** y conecta GitHub.
 2. Elige el repositorio `Anto-Rodara/Pagina-Nashh` y la rama `main`.
@@ -25,14 +23,14 @@ La configuración de `netlify.toml` publica la carpeta raíz del proyecto direct
 
 ### Publicar manualmente
 
-Arrastra la carpeta del proyecto a Netlify Drop. Incluye `index.html`, `style.css`, `app.js` y las carpetas `Imagenes` y `Musica`.
+Arrastra esta carpeta a Netlify Drop. Incluye `index.html`, `style.css`, `app.js` y las carpetas `Imagenes` y `Musica`.
 
 ## Publicarlo con GitHub Pages
 
-1. Sube los archivos y carpetas de este proyecto a la rama principal (`main`), conservando sus nombres y mayúsculas.
+1. Usa el repositorio `Anto-Rodara/Pagina-Nashh` en GitHub y conserva los nombres y mayúsculas de los archivos y carpetas.
 2. En el repositorio, abre **Settings → Pages**.
 3. En **Build and deployment**, selecciona **Deploy from a branch**.
-4. Selecciona `main` y la carpeta raíz (`/root`), y guarda.
+4. Selecciona la rama principal (`main`) y la carpeta raíz (`/root`), y guarda.
 5. Cuando termine la publicación, abre la URL que GitHub Pages muestre en esa misma sección.
 
 La página de inicio debe permanecer como `index.html` en la raíz del repositorio. Las carpetas `Imagenes` y `Musica` también deben estar en la raíz para que las rutas relativas funcionen.
